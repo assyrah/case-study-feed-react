@@ -1,0 +1,139 @@
+.header {
+    background-color: $color-body;
+    margin-bottom: 6rem;
+
+    @media (min-width: $breakpoint-lg) {
+        margin-bottom: 1rem;
+    }
+    h3 {
+        color: $color-font-inverted;
+    }
+    &-nav {
+        min-height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: $font-size-sm;
+        flex-flow: wrap;
+        position: fixed;
+        top: 0;
+        @media (min-width: $breakpoint-lg) {
+            position: relative;
+        }
+        .navbar-item {
+            display: inline-block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin: 0;
+            color: $color-font;
+            font-weight: normal;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+            
+            @media (min-width: $breakpoint-lg) {
+                width: auto;
+                text-align: left;
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                color: lighten($color-font, 60%);
+            }
+        }
+
+        &-links {
+            display: none;
+            clear: both;
+            
+            @media (min-width: $breakpoint-lg) {
+                flex-basis: 40%;
+                justify-content: space-between;
+                display: flex;
+            }
+        }
+    }
+
+    .logo-container {
+        flex: 0 0 auto;
+    }
+    
+    .menu {
+        &-icon {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            padding: 38px 20px;
+            position: relative;
+            user-select: none;
+            .navicon {
+                background: $color-primary;
+                display: block;
+                height: 2px;
+                position: relative;
+                transition: background .2s ease-out;
+                width: 18px;
+                &:before {
+                    background: $color-primary;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: 5px;
+                }
+                &:after {
+                    background: $color-primary;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: -5px;
+                }
+            }
+            
+
+        @media (min-width: $breakpoint-lg) {
+            display: none;
+        }
+        }
+        &-btn {
+            display: none;
+            &:checked {
+                ~ {
+                    .header-nav-links{
+                        max-height: 240px;
+                        display: block;
+                        width: 100%;
+                    }
+                    .menu-icon {
+                        .navicon {
+                            background: transparent;
+                            &:before {
+                                transform: rotate(-45deg);
+                            }
+                            &:after {
+                                transform: rotate(45deg);
+                            }
+                        }
+                        &:not(.steps) {
+                            .navicon {
+                                &:before {
+                                    top: 0;
+                                }
+                                &:after {
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+	
+}
+

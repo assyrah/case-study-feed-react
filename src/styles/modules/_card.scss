@@ -1,0 +1,27 @@
+.card {
+    padding: 1rem;
+    background-color: $color-mono-100;
+
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+        img {
+            margin-bottom: 1rem;
+        }
+        > *:last-child {
+            margin-top: auto;
+        }
+    }
+
+    &--horizontal {
+        justify-content: space-between;
+        > div {
+            margin-right: auto;
+        }
+        .right-content {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

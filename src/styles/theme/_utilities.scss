@@ -1,0 +1,45 @@
+.text-bold {
+    font-weight: $font-weight-bold;
+}
+.text-size-base {
+    font-size:  $font-size-base;
+}
+.no-padding {
+    padding: 0;
+}
+.no-margin {
+    margin: 0;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.vis-hidden {
+    visibility: hidden;
+}
+.vis-visible {
+    visibility: visible;
+}
+.font-gray {
+    color: $color-mono-400;
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+    .text-bold-sm {
+        font-weight: $font-weight-bold;
+    }
+    .text-size-base-sm {
+        font-size: $font-size-base;
+    }
+    .no-padding-sm {
+        padding: 0;
+    }
+    .hide-sm {
+        display: none;
+    }
+    .show-sm {
+        display: block;
+    }
+}
